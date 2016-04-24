@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <com.kubeiwu.faceunlock.ui.views.Preview
+            android:id="@+id/my_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.kubeiwu.faceunlock.ui.views.Preview>
+
+        <Button
+            android:id="@+id/take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="拍照" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/sc2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center" >
+
+        <!-- 时间显示 -->
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23:12"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="80sp" />
+
+        <!-- 上午、下午显示 -->
+
+<!--         <TextView -->
+<!--             android:id="@+id/am_pm" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_alignBottom="@id/time" -->
+<!--             android:layout_marginLeft="8dip" -->
+<!--             android:layout_toRightOf="@id/time" -->
+<!--             android:ellipsize="none" -->
+<!--             android:singleLine="true" -->
+<!--             android:text="23:12" -->
+<!--             android:textSize="20sp" -->
+<!--             android:visibility="gone" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="42dip"
+         android:layout_marginBottom="3dip"
+        android:orientation="vertical" >
+
+        <!-- 日期显示 -->
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="07-11-2015"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <!-- 音乐播放界面歌手名显示，歌手名过长会以跑马灯的形式显示 -->
+
+<!--     <TextView -->
+<!--         android:id="@+id/artist" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_gravity="center" -->
+<!--         android:ellipsize="marquee" -->
+<!--         android:singleLine="true" -->
+<!--         android:textColor="#ffffff" -->
+<!--         android:textSize="14dip" /> -->
+
+<!--     <TextView -->
+<!--         android:id="@+id/music" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_gravity="center" -->
+<!--         android:ellipsize="marquee" android:background="#FFFF00" -->
+<!--         android:paddingBottom="20dp" -->
+<!--         android:singleLine="true" -->
+<!--         android:textColor="#ffffff" -->
+<!--         android:textSize="14dip" /> -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coutent"
+       
+        android:layout_gravity="center" >
+
+    </FrameLayout>
+
+</LinearLayout>

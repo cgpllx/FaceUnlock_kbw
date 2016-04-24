@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--     <color name="orange_500">#FF9800</color> -->
+<!--     <color name="orange_200">#FFCC80</color> -->
+    <!-- <color name="hong">#FFFF00</color> -->
+    <color name="ldrawer_color">#FF0000</color>
+    <!-- title barcolor 1DA4E8 蓝色 -->
+    <color name="color_1da4e8">#1DA4E8</color>
+    <!-- 默认背景颜色，F6F6F6灰色 -->
+    <color name="color_f6f6f6">#F6F6F6</color>
+    <!-- 默认背景颜色，FFFFFF白色 -->
+    <color name="color_ffffff">#FFFFFF</color>
+    <color name="color_6495ED">#5CACAA</color>
+
+</resources>
