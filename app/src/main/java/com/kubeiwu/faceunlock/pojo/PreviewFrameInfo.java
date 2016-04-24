@@ -10,6 +10,7 @@ public class PreviewFrameInfo {
 		this.data = data;
 		this.width = width;
 		this.height = height;
+		//
 	}
 
 	public PreviewFrameInfo() {
