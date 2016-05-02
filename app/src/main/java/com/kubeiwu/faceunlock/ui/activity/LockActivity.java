@@ -25,7 +25,7 @@ public class LockActivity extends BaseActivity  {
 		super.onCreate(savedInstanceState);
 		// setContentView(R.layout.activity_unlock);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);// 去掉信息栏
-		getSupportActionBar().hide();
+//		getSupportActionBar().hide();
 		this.getWindow().setFlags(FLAG_HOMEKEY_DISPATCHED, FLAG_HOMEKEY_DISPATCHED);// 关键代码
 		setContentView(R.layout.main);
 		time = (TextView) findViewById(R.id.time);

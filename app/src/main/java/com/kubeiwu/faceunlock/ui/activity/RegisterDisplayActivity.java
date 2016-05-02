@@ -108,7 +108,7 @@ public class RegisterDisplayActivity extends BaseActivity implements ProgressLis
 
 	@Override
 	public void success() {
-		Toast.makeText(getApplicationContext(), "人脸注册成功", 1).show();
+		Toast.makeText(getApplicationContext(), "人脸注册成功", Toast.LENGTH_SHORT).show();
 		faceregisterdone.setVisibility(View.VISIBLE);
 		footerRightButton.setEnabled(true);
 		PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(Constants.FACEREGISTER_SUCCEE, true).commit();

@@ -16,7 +16,9 @@
     <TextView
         android:id="@+id/pl_message_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="#1DA4E8"
+        android:textColor="@android:color/white"
+        android:layout_height="?actionBarSize"
         android:minHeight="?android:attr/listPreferredItemHeight"
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceMedium" />
