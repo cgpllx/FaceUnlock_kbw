@@ -11,7 +11,7 @@ import rx.schedulers.Schedulers;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.kubeiwu.faceunlock.KonkaApplication;
+import com.kubeiwu.faceunlock.KApplication;
 import com.kubeiwu.faceunlock.R;
 import com.kubeiwu.faceunlock.ui.fragment.ErrorDialogFragment;
 import com.kubeiwu.faceunlock.util.FileUtil;
@@ -34,7 +34,7 @@ public class SplashActivity extends BaseActivity {
 			@Override
 			public void call(Subscriber<? super Boolean> arg0) {
 				try {
-					KonkaApplication app = (KonkaApplication) getApplication();
+					KApplication app = (KApplication) getApplication();
 					FileUtil.copyResToSdcard(getApplicationContext(), app.getModelPath());
 					arg0.onNext(true);
 					arg0.onCompleted();

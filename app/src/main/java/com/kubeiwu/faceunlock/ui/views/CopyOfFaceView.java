@@ -23,9 +23,9 @@ import android.media.FaceDetector;
 import android.os.Environment;
 import android.view.View;
 
-import com.kubeiwu.faceunlock.KonkaApplication;
-import com.kubeiwu.faceunlock.util.Files;
 import com.konka.project.KonkaSo;
+import com.kubeiwu.faceunlock.KApplication;
+import com.kubeiwu.faceunlock.util.Files;
 
 // can we use startFaceDetection on camera? probably not
 public class CopyOfFaceView extends View implements Camera.PreviewCallback {
@@ -133,7 +133,7 @@ public class CopyOfFaceView extends View implements Camera.PreviewCallback {
 		// faceDetector = new FaceDetector(width, height, N_MAX);
 		// face = new FaceDetector.Face[N_MAX];
 		// int nFace = faceDetector.findFaces(srcFace, face);
-		KonkaApplication app = (KonkaApplication) getContext().getApplicationContext();
+		KApplication app = (KApplication) getContext().getApplicationContext();
 		String modelpath = app.getModelPath();
 		 int[] results = KonkaSo.FaceDetect(Files.bitmap2intArray(srcFace),
 		 modelpath, width, height);
@@ -149,7 +149,7 @@ public class CopyOfFaceView extends View implements Camera.PreviewCallback {
 			@Override
 			public void call(Subscriber<? super List<String>> sub) {
 
-				KonkaApplication app = (KonkaApplication) getContext().getApplicationContext();
+				KApplication app = (KApplication) getContext().getApplicationContext();
 				String modelpath = app.getModelPath();
 				int[] results = KonkaSo.FaceDetect(Files.bitmap2intArray(bitmap), modelpath, bitmap.getWidth(), bitmap.getHeight());
 				if (sub.isUnsubscribed()) {

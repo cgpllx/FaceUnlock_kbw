@@ -22,13 +22,13 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.hardware.Camera;
 
-import com.kubeiwu.faceunlock.KonkaApplication;
+import com.konka.project.KonkaSo;
+import com.kubeiwu.faceunlock.KApplication;
 import com.kubeiwu.faceunlock.core.OnUnLockListener;
 import com.kubeiwu.faceunlock.pojo.PreviewFrameInfo;
 import com.kubeiwu.faceunlock.util.Files;
 import com.kubeiwu.faceunlock.util.KeyUtils;
 import com.kubeiwu.faceunlock.util.Utils;
-import com.konka.project.KonkaSo;
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.VerifyResult;
@@ -43,7 +43,7 @@ public class UnLockService implements Camera.PreviewCallback {
 
 	public UnLockService(Context context) {
 		this.context = context;
-		KonkaApplication app = (KonkaApplication) context.getApplicationContext();
+		KApplication app = (KApplication) context.getApplicationContext();
 		modelpath = app.getModelPath();
 
 		// face = new FaceDetector.Face[N_MAX];
@@ -174,7 +174,7 @@ public class UnLockService implements Camera.PreviewCallback {
 						continue;
 					}
 
-					VerifyResult verifyResult = KonkaApplication.getFaceServiceClient().verify(uuid_1, uuid_2);
+					VerifyResult verifyResult = KApplication.getFaceServiceClient().verify(uuid_1, uuid_2);
 
 					if (verifyResult != null) {
 						System.out.println("cgp====verifyResult=" + verifyResult.confidence);
@@ -204,7 +204,7 @@ public class UnLockService implements Camera.PreviewCallback {
 			ByteArrayOutputStream output = new ByteArrayOutputStream();
 			bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output);
 			ByteArrayInputStream inputStream = new ByteArrayInputStream(output.toByteArray());
-			FaceServiceClient faceServiceClient = KonkaApplication.getFaceServiceClient();
+			FaceServiceClient faceServiceClient = KApplication.getFaceServiceClient();
 			// Start detection.
 			Face[] faces = faceServiceClient.detect(inputStream, true, false, null);
 			if (faces != null && faces.length > 0) {

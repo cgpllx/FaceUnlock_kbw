@@ -11,12 +11,8 @@ import com.kubeiwu.faceunlock.util.FileUtil;
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.FaceServiceRestClient;
 
-public class KonkaApplication extends Application {
-//	public static final String MODEL_FILE = "/storage/sdcard0/konka";
-//	// 人脸解锁
-//	public static final String MODEL_FACE_VERIFICATION1 = MODEL_FILE + "/subsml.xml";
-//	// 人脸区域检测
-//	public static final String MODEL_FACE_DETECT1 = MODEL_FILE + "/haarcascade_frontalface_alt.xml";
+public class KApplication extends Application {
+
 
 	public static final String UNIQUENAME = "konka";
 
@@ -27,11 +23,7 @@ public class KonkaApplication extends Application {
 		 sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
 
 	}
-//    @Override
-//    public void onCreate() {
-//        super.onCreate();
-//       
-//    }
+
 
     public static FaceServiceClient getFaceServiceClient() {
         return sFaceServiceClient;
@@ -45,7 +37,7 @@ public class KonkaApplication extends Application {
 		System.out.println("开始启动服务");
 		Intent intent = new Intent(this, LockScreenService.class);
 		startService(intent);
-//		FileUtil.copyResToSdcard(getApplicationContext(), filepath);
+
 	}
 
 

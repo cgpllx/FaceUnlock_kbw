@@ -124,7 +124,7 @@ public class DisplayFragment1 extends BaseFragment implements OnClickListener, C
 			// datas.add(data);
 
 			// if (datas.size() > 0) {
-			// KonkaApplication app = (KonkaApplication)
+			// KApplication app = (KApplication)
 			// getActivity().getApplication();
 			// Bitmap oldBitmap = BitmapFactory.decodeByteArray(data, 0,
 			// data.length);

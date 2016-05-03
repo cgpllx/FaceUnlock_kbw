@@ -19,14 +19,14 @@ import android.graphics.Matrix;
 import android.hardware.Camera;
 import android.media.FaceDetector;
 
+import com.konka.project.KonkaSo;
 import com.kubeiwu.faceunlock.Constants;
-import com.kubeiwu.faceunlock.KonkaApplication;
+import com.kubeiwu.faceunlock.KApplication;
 import com.kubeiwu.faceunlock.core.ProgressListener;
 import com.kubeiwu.faceunlock.pojo.PreviewFrameInfo;
 import com.kubeiwu.faceunlock.util.FileUtil;
 import com.kubeiwu.faceunlock.util.Files;
 import com.kubeiwu.faceunlock.util.Utils;
-import com.konka.project.KonkaSo;
 
 // can we use startFaceDetection on camera? probably not
 @SuppressWarnings("deprecation")
@@ -38,7 +38,7 @@ public class FaceView implements Camera.PreviewCallback {
 
 	public FaceView(Context context) {
 		this.context = context;
-		KonkaApplication app = (KonkaApplication) context.getApplicationContext();
+		KApplication app = (KApplication) context.getApplicationContext();
 		modelpath = app.getModelPath();
 
 		// face = new FaceDetector.Face[N_MAX];
